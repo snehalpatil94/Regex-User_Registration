@@ -38,7 +38,7 @@ public class ValidateUserRegistration {
 
 	// Method to validate Email Id
 	public boolean validatEmail(String name) {
-		String regex = "^[a-z]{3}[a-zA-Z0-9@#!%*-+_.^$]*@[a-z]{2}.[a-z]{2}[.]{1}[a-z]*$";
+		String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:([0-9]{1}|[a-zA-Z]{2,5})\\.)+[a-zA-Z]{2,3}";
 		if (name.matches(regex)) {
 			System.out.println("Email Id is Valid !");
 			System.out.println("------------------------------------------------------------------------");
@@ -47,6 +47,21 @@ public class ValidateUserRegistration {
 			System.out.println("Email Id is Invalid !");
 			System.out.println("------------------------------------------------------------------------");
 			return false;
+		}
+	}
+	
+	// Method to validate Mobile number
+	public void validateMobileNum(String mobNumber) {
+		// pattern
+		String mobNumberPattern = "[0-9]{2}[\s][0-9]{10}";
+		if (mobNumber.matches(mobNumberPattern)) { // check Input and Pattern
+			System.out.println("'" + mobNumber + "'" + " is valid Mobile Number !");
+			System.out.println("------------------------------------------------------------------------");
+		} else {
+			System.out.println("'" + mobNumber + "'" + " is Invalid Mobile Number !");
+			System.out.println();
+			System.out.println("Country code follow by space and 10 digit number ");
+			System.out.println("------------------------------------------------------------------------");
 		}
 	}
 }

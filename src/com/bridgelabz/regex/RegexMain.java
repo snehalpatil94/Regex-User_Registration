@@ -3,9 +3,9 @@ package com.bridgelabz.regex;
 import java.util.Scanner;
 
 /**
- * Validate Email Id : As a User need to enter Email has 3 mandatory parts (abc,
- * bl & co) and 2 optional (xyz & in) with precise @ and . positions Ex.
- * abc.xyz@bl.co.in
+ * Validate Mobile number : As a User need to follow pre-defined Mobile Format
+ * Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10
+ * digit number
  * 
  * @author : Snehal Patil
  *
@@ -21,17 +21,22 @@ public class RegexMain {
 		// Create object of ValidateUserRegistration class
 		ValidateUserRegistration validate = new ValidateUserRegistration();
 
-		// Method call to validate user first name
+		// Method call to validate user First name
 		validate.validateFirstName("Snehal");
 		validate.validateFirstName("snehal");
 
-		// Method call to validate user last name
+		// Method call to validate user Last name
 		validate.validateLastName("Patil");
 		validate.validateLastName("patil");
 
-		// Method call to validate email id
+		// Method call to validate Email id
 		validate.validatEmail("abc.xyz@bl.co.in");
 		validate.validatEmail("abc_10@yahoo");
-		validate.validatEmail("abc@yahoo.");
+		validate.validatEmail("abc@abc@gmail.com");
+
+		// Method call to validate Mobile no
+		validate.validateMobileNum("91 1234567890");
+		validate.validateMobileNum("91 123456789");
+		validate.validateMobileNum("911234567890");
 	}
 }
