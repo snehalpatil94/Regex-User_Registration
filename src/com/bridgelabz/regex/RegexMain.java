@@ -3,7 +3,9 @@ package com.bridgelabz.regex;
 import java.util.Scanner;
 
 /**
- * Valid Last Name - Last name starts with Cap and has minimum 3 characters
+ * Validate Email Id : As a User need to enter Email has 3 mandatory parts (abc,
+ * bl & co) and 2 optional (xyz & in) with precise @ and . positions Ex.
+ * abc.xyz@bl.co.in
  * 
  * @author : Snehal Patil
  *
@@ -11,7 +13,7 @@ import java.util.Scanner;
 public class RegexMain {
 
 	public static void main(String[] args) {
-		System.out.println("-----Welcome message to user registration program------");
+		System.out.println("-------------Welcome message to user registration program ---------------");
 		System.out.println();
 
 		Scanner sc = new Scanner(System.in);
@@ -23,16 +25,13 @@ public class RegexMain {
 		validate.validateFirstName("Snehal");
 		validate.validateFirstName("snehal");
 
-		System.out.println("Enter First name: ");
-		String firstName = sc.nextLine();
-		validate.validateFirstName(firstName);
-
 		// Method call to validate user last name
 		validate.validateLastName("Patil");
 		validate.validateLastName("patil");
 
-		System.out.println("Enter Last name: ");
-		String lastName = sc.nextLine();
-		validate.validateFirstName(lastName);
+		// Method call to validate email id
+		validate.validatEmail("abc.xyz@bl.co.in");
+		validate.validatEmail("abc_10@yahoo");
+		validate.validatEmail("abc@yahoo.");
 	}
 }
