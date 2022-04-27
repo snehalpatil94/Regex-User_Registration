@@ -31,7 +31,7 @@ public class ValidateUserRegistration {
 			System.out.println("'" + name + "'" + " is Invalid Last Name !");
 			System.out.println();
 			System.out.println("Last name should starts with Capital letter and has minimum 3 characters");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------");
 			return false;
 		}
 	}
@@ -40,12 +40,12 @@ public class ValidateUserRegistration {
 	public boolean validatEmail(String name) {
 		String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:([0-9]{1}|[a-zA-Z]{2,5})\\.)+[a-zA-Z]{2,3}";
 		if (name.matches(regex)) {
-			System.out.println("Email Id is Valid !");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("'" + name + "'" + " is Valid Email Id !");
+			System.out.println("-------------------------------------------------------------------------");
 			return true;
 		} else {
-			System.out.println("Email Id is Invalid !");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("'" + name + "'" + " is Invalid Email Id !");
+			System.out.println("-------------------------------------------------------------------------");
 			return false;
 		}
 	}
@@ -56,25 +56,26 @@ public class ValidateUserRegistration {
 		String mobNumberPattern = "[0-9]{2}[\s][0-9]{10}";
 		if (mobNumber.matches(mobNumberPattern)) { // check Input and Pattern
 			System.out.println("'" + mobNumber + "'" + " is valid Mobile Number !");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------");
 		} else {
 			System.out.println("'" + mobNumber + "'" + " is Invalid Mobile Number !");
 			System.out.println();
 			System.out.println("Country code follow by space and 10 digit number ");
-			System.out.println("------------------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------");
 		}
 	}
 
 	// Method to validate Password
 	public void validatePassword(String password) {
-		String passwordRegex = "(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*_.+-]{8,20}";
+		String passwordRegex = "(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z!@#$%^&*_.+-]{8,20}";
 		if (password.matches(passwordRegex)) { // check Input and Pattern
 			System.out.println("'" + password + "'" + " is valid Password !");
-			System.out.println("-----------------------------------------------------------------------");
+			System.out.println("-------------------------------------------------------------------------");
 		} else {
 			System.out.println("'" + password + "'" + " is Invalid Password !");
-			System.out.println("\n1. Minimum 8 charatcers \n2. Should have at least 1 Upper Case");
-			System.out.println("-----------------------------------------------------------------------");
+			System.out.println(
+					"\nPassword Should have : \n1. Minimum 8 charatcers \n2. At least 1 Upper Case \n3. At least 1 Numeric Number");
+			System.out.println("-------------------------------------------------------------------------");
 		}
 	}
 }
