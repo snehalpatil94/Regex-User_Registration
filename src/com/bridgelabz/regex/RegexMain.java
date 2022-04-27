@@ -3,9 +3,8 @@ package com.bridgelabz.regex;
 import java.util.Scanner;
 
 /**
- * Validate Mobile number : As a User need to follow pre-defined Mobile Format
- * Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10
- * digit number
+ * As a User need to follow pre-defined Password rules. Rule1 – minimum 8
+ * Characters
  * 
  * @author : Snehal Patil
  *
@@ -38,5 +37,11 @@ public class RegexMain {
 		validate.validateMobileNum("91 1234567890");
 		validate.validateMobileNum("91 123456789");
 		validate.validateMobileNum("911234567890");
+		
+		// Method call to validate Password
+		validate.validatePassword("password");
+		validate.validatePassword("Eight$100");
+		validate.validatePassword("Eight");
+		
 	}
 }

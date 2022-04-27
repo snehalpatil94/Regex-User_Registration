@@ -49,7 +49,7 @@ public class ValidateUserRegistration {
 			return false;
 		}
 	}
-	
+
 	// Method to validate Mobile number
 	public void validateMobileNum(String mobNumber) {
 		// pattern
@@ -62,6 +62,18 @@ public class ValidateUserRegistration {
 			System.out.println();
 			System.out.println("Country code follow by space and 10 digit number ");
 			System.out.println("------------------------------------------------------------------------");
+		}
+	}
+
+	public void validatePassword(String password) {
+		String passwordRegex = "[0-9a-zA-Z!@#$%^&*_.+-]{8,20}";
+		if (password.matches(passwordRegex)) { // check Input and Pattern
+			System.out.println("'" + password + "'" + " is valid Password !");
+			System.out.println("-----------------------------------------------------------------------");
+		} else {
+			System.out.println("'" + password + "'" + " is Invalid Password !");
+			System.out.println("\n1. Minimum 8 charatcers ");
+			System.out.println("-----------------------------------------------------------------------");
 		}
 	}
 }
