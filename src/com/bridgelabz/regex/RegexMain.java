@@ -3,8 +3,8 @@ package com.bridgelabz.regex;
 import java.util.Scanner;
 
 /**
- * As a User need to follow pre-defined Password rules. Rule1 – minimum 8
- * Characters
+ * Validate Password : As a User need to follow pre-defined Password rules.
+ * Rule2 – Should have at least 1 Upper Case
  * 
  * @author : Snehal Patil
  *
@@ -37,11 +37,12 @@ public class RegexMain {
 		validate.validateMobileNum("91 1234567890");
 		validate.validateMobileNum("91 123456789");
 		validate.validateMobileNum("911234567890");
-		
+
 		// Method call to validate Password
 		validate.validatePassword("password");
-		validate.validatePassword("Eight$100");
+		validate.validatePassword("Password");
 		validate.validatePassword("Eight");
-		
+		validate.validatePassword("PASSWORD");
+
 	}
 }
