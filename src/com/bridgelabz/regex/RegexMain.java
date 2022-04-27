@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Validate Password : As a User need to follow pre-defined Password rules. Rule
- * 3 – Should have at least 1 Numeric Number
+ * 4 – Has exactly 1 Special Character
  * 
  * @author : Snehal Patil
  *
@@ -43,5 +43,6 @@ public class RegexMain {
 		validate.validatePassword("password1");
 		validate.validatePassword("Eight");
 		validate.validatePassword("PASSWORD123");
+		validate.validatePassword("Password@100");
 	}
 }
