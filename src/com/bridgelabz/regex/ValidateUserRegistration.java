@@ -38,7 +38,7 @@ public class ValidateUserRegistration {
 
 	// Method to validate Email Id
 	public boolean validatEmail(String name) {
-		String regex = "^[a-z]{3}[a-zA-Z0-9@#!%*-+_.^$]*@[a-z]{2}.[a-z]{2}[.]{1}[a-z]*$";
+		String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:([0-9]{1}|[a-zA-Z]{2,5})\\.)+[a-zA-Z]{2,3}";
 		if (name.matches(regex)) {
 			System.out.println("Email Id is Valid !");
 			System.out.println("------------------------------------------------------------------------");
